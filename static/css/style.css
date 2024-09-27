@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Birthstone Bounce";
+    src: url("../font/DancingScript-VariableFont_wght.ttf");
+}
+
+html {
+    font-size: 62.5%;
+    font-family: sans-serif;
+    cursor: auto;
+}
+
+.background {
+    width: 99vw;
+    height: 99vh;
+    position: relative;
+}
+
+.brief {
+    display: flex;
+    justify-content: center;
+    color: #4e1a03;
+}
+
+.brief__text {
+    font-size: 3.4rem;
+    display: flex;
+    flex-direction: column;
+    width: 160rem;
+    font-family: "Birthstone Bounce";
+    line-height: 200%;
+    position: absolute;
+    top: 12%;
+}
+
+.brief__text__title {
+    font-size: 6rem;
+    font-weight: 500;
+}
+
+.highlight {
+    color: blue;
+    font-weight: 500;
+    font-size: 3.6rem;
+    animation: highlight 2s ease-in infinite;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@keyframes highlight {
+
+    0%,
+    50%,
+    80% {
+        color: rgb(0, 0, 139);
+    }
+
+    25%,
+    100% {
+        color: rgb(0, 0, 0);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
+
+.popup__collection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.popup {
+    top: 20rem;
+    width: 70vw;
+    display: none;
+    color: black;
+    border: 1px solid black;
+    background-color: lightgray;
+    z-index: 1;
+    position: fixed;
+    top: 25%;
+    animation: opacity 0.3s ease-in-out;
+}
+
+.popup__figure {
+    padding: 2rem;
+    width: 40%;
+}
+
+.popup__img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+}
+
+.popup__text {
+    flex-direction: column;
+    padding: 2rem;
+    width: 60%;
+    font-size: 2rem;
+    gap: 1.4rem;
+    line-height: 1.7;
+}
+
+.popup__title {
+    font-family: "Birthstone Bounce";
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.popup__par span {
+    font-weight: bold;
+}
+
+.close-button {
+    margin: 2rem;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5.5rem;
+    font-size: 3rem;
+    background: white(0, 0, 139);
+    color: #4e1a03(0, 0, 139);
+    border: 2px solid #4e1a03(0, 0, 139);
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #4e1a03;
+    border-radius: 5px;
+}
